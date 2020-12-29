@@ -1,7 +1,7 @@
 # FaceBattle_backend
 Face Battle application backend
 
-
+<br><br>
 ## API 명세
 
 1. 사용자는 사진 업로드 버튼을 누른다.
