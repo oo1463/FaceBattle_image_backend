@@ -6,22 +6,39 @@ Docker - Flask REST api end point
 <br>
 
 ### Build application
+
+---
+
 ```buildoutcfg
 $ git clone https://github.com/oo1463/FaceBattle_image_backend.git
 dkcer built -t oo1463/FaceBattle_image_backend .
 ``` 
+<br>
+
 ### Run containers
+
+---
+
 After images build
 ```buildoutcfg
-$ docker run -d --name facebattle -p 8080:8080 oo1463/FaceBattle_image_backend
+$ docker run -d --name facebattle_image -p 8080:8080 oo1463/FaceBattle_image_backend
 ```
 <br>
 
 and visit <br> [http://localhost:8080](http://localhost:8080)
 
+<br>
+
+### Stop containers
+
+--- 
+```buildoutcfg
+$ docker stop facebattle_image
+```
+
 <br> 
 
-## API 명세
+## API Specification
 
 1. 사용자는 사진 업로드 버튼을 누른다.
     - API 없음
