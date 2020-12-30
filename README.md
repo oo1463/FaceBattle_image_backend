@@ -1,7 +1,26 @@
-# FaceBattle_backend
+# FaceBattle_image_backend
 Face Battle application backend
 
-<br><br>
+Docker - Flask REST api end point
+
+<br>
+
+### Build application
+```buildoutcfg
+$ git clone https://github.com/oo1463/FaceBattle_image_backend.git
+dkcer built -t oo1463/FaceBattle_image_backend .
+``` 
+### Run containers
+After images build
+```buildoutcfg
+$ docker run -d --name facebattle -p 8080:8080 oo1463/FaceBattle_image_backend
+```
+<br>
+
+and visit <br> [http://localhost:8080](http://localhost:8080)
+
+<br> 
+
 ## API 명세
 
 1. 사용자는 사진 업로드 버튼을 누른다.
