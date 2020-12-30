@@ -13,6 +13,12 @@ Docker - Flask REST api end point
 $ git clone https://github.com/oo1463/FaceBattle_image_backend.git
 dkcer built -t oo1463/FaceBattle_image_backend .
 ``` 
+
+or pull from docker hub
+```buildoutcfg
+$ docker pull oo1463/facebattle_image_backend:latest
+```
+
 <br>
 
 ### Run containers
@@ -34,6 +40,11 @@ and visit <br> [http://localhost:8080](http://localhost:8080)
 --- 
 ```buildoutcfg
 $ docker stop facebattle_image
+or
+$ docker kill facebattle_image
+
+And
+$ docker rm facebattle_image
 ```
 
 <br> 
