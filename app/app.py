@@ -1,6 +1,5 @@
 from flask import Flask,render_template
 import socket
-from oauth2client.contrib.flask_util import UserOAuth2
 
 app = Flask(__name__)
 
