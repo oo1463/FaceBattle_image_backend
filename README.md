@@ -27,11 +27,11 @@ $ docker pull oo1463/facebattle_image_backend:latest
 
 After images build
 ```buildoutcfg
-$ docker run -d --rm --name facebattle_image -p 8080:8080 oo1463/FaceBattle_image_backend
+$ docker run -d --rm --name facebattle_image -p 8081:8081 oo1463/FaceBattle_image_backend
 ```
 <br>
 
-and visit <br> [http://localhost:8080](http://localhost:8080)
+and visit <br> [http://localhost:8081](http://localhost:8081)
 
 <br>
 
