@@ -11,7 +11,7 @@ Docker - Flask REST api end point
 
 ```buildoutcfg
 $ git clone https://github.com/oo1463/FaceBattle_image_backend.git
-docker built -t oo1463/FaceBattle_image_backend .
+$ docker built -t oo1463/FaceBattle_image_backend .
 ``` 
 
 or pull from docker hub
@@ -21,7 +21,7 @@ $ docker pull oo1463/facebattle_image_backend:latest
 
 <br>
 
-### Run containers
+### Run Images
 
 ---
 
