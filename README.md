@@ -14,7 +14,7 @@ $ git clone https://github.com/oo1463/FaceBattle_image_backend.git
 $ docker built -t oo1463/FaceBattle_image_backend .
 ``` 
 
-or pull from docker hub
+or pull this image from docker hub
 ```buildoutcfg
 $ docker pull oo1463/facebattle_image_backend:latest
 ```
@@ -31,7 +31,8 @@ $ docker run -d --rm --name facebattle_image -p 8080:8080 oo1463/FaceBattle_imag
 ```
 <br>
 
-and visit <br> [http://localhost:8080](http://localhost:8080)
+and visit <br>
+[http://localhost:8080](http://localhost:8080)
 
 <br>
 
