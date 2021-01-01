@@ -50,6 +50,7 @@ $ docker rm facebattle_image
 
 <br> 
 
+
 ## API Specification
 
 1. 사용자는 사진 업로드 버튼을 누른다.
