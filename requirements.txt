@@ -1,5 +1,5 @@
 flask==1.1.2
 tensorflow==2.3.0
 Flask-RESTful==0.3.8
-numpy==1.19.5
+numpy==1.19.0
 opencv-python==4.5.1.48

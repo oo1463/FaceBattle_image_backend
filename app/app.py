@@ -1,14 +1,14 @@
 from flask import Flask, render_template, jsonify, request, Response
 from flask_restful import Resource, Api
 import numpy as np
-# import tensorflow
+import tensorflow
 import cv2
 import json
 app = Flask(__name__)
 
 
 @app.route("/images", methods=['POST'])
-def predict():
+def get_images():
     req = request
     # uploaded_files = request.files.getlist("file")
     # print(req.header)
