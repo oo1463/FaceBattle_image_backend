@@ -69,3 +69,35 @@ $ docker rm facebattle_image
         return : 비트맵 데이터 2개 각각에 대한 **정규화된 점수 2개.**
 
 6. 결과 화면이 나타난다.
+
+
+<br>
+<br>
+<br>
+
+
+`[POST]` `/images`
+
+### Request
+
+Parameter | Description
+-- | --
+image1 | 첫번째 이미지
+image2 | 두번째 이미지
+
+### Response
+
+Status Code | 설명
+-- | --
+200 OK | 성공
+400 Bad Request | images의 개수가 잘못됨
+500 Internal Server Error | 서버 에러, 문의 필요
+
+### Response body
+
+```
+{
+  "image1_score": "",
+  "image2_score": "",
+}
+```
