@@ -1,8 +1,6 @@
-from flask import Flask, render_template, jsonify, request, Response
-from flask_restful import Resource, Api, reqparse
+from flask import Flask, jsonify, request
 import numpy as np
-import tensorflow
-from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.models import load_model
 import cv2
 import json
 from PIL import Image
@@ -11,6 +9,7 @@ from PIL import Image
 app = Flask(__name__)
 
 model = load_model('./Face_model')
+
 
 @app.route("/images", methods=['POST'])
 def get_images():
