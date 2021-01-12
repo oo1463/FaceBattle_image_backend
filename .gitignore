@@ -6,10 +6,6 @@ __pycache__/
 # C extensions
 *.so
 
-# CNN model
-app/Face_model/saved_model.pb
-app/Face_model/variables
-
 # Distribution / packaging
 .Python
 build/
