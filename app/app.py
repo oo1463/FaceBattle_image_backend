@@ -30,11 +30,15 @@ def get_images():
     img1 = img1.reshape(1, 96, 96, 3)
     pred_1 = model.predict(img1)
 
-    img2 = img1.reshape(1, 96, 96, 3)
+    img2 = img2.reshape(1, 96, 96, 3)
     pred_2 = model.predict(img2)
 
     mx1 = np.argmax(pred_1)
     mx2 = np.argmax(pred_2)
+
+    np.set_printoptions(suppress=True)
+    print(pred_1)
+    print(pred_2)
 
     print(mx1, pred_1.max())
     print(mx2, pred_2.max())
