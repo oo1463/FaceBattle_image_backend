@@ -1,8 +1,7 @@
-from flask import Flask, jsonify, request, Response
+from flask import Flask, jsonify, request
 import numpy as np
 from tensorflow.keras.models import load_model
 import cv2
-import json
 from PIL import Image
 
 
@@ -13,8 +12,6 @@ model = load_model('./Face_model')
 
 @app.route("/images", methods=['POST'])
 def get_images():
-    file1 = request.files['image1'].read()
-    file2 = request.files['image2'].read()
 
     img1 = Image.open(request.files['image1'])
     img1 = np.array(img1)
