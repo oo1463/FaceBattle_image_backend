@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, Response
 import numpy as np
 from tensorflow.keras.models import load_model
 import cv2
@@ -27,20 +27,28 @@ def get_images():
     print(img1.shape)
     print(img2.shape)
 
-    img1 = img1.reshape(1, 96, 96, 3)
-    pred_1 = model.predict(img1)
+    try:
+        img1 = img1.reshape(1, 96, 96, 3)
+        pred_1 = model.predict(img1)
 
-    img2 = img1.reshape(1, 96, 96, 3)
-    pred_2 = model.predict(img2)
+        img2 = img2.reshape(1, 96, 96, 3)
+        pred_2 = model.predict(img2)
 
-    mx1 = np.argmax(pred_1)
-    mx2 = np.argmax(pred_2)
+        mx1 = np.argmax(pred_1)
+        mx2 = np.argmax(pred_2)
 
-    print(mx1, pred_1.max())
-    print(mx2, pred_2.max())
+        np.set_printoptions(suppress=True)
+        print(pred_1)
+        print(pred_2)
 
-    response = {'image1_score': '{}'.format(mx1), 'image2_score': '{}'.format(mx2)}
-    return jsonify(response)
+        print(mx1, pred_1.max())
+        print(mx2, pred_2.max())
+
+        response = {'image1_score': '{}'.format(pred_1.max()), 'image2_score': '{}'.format(pred_2.max())}
+        return jsonify(response)
+    except:
+        response = {'message': 'invalid pictures'}
+        return jsonify(response), 403
 
 
 if __name__ == "__main__":

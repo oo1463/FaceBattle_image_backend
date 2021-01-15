@@ -78,7 +78,14 @@ $ docker rm facebattle_image
 
 `[POST]` `/images`
 
+
+
 ### Request
+
+#### header
+`Content-Type: multipart/form-data`
+
+#### body
 
 Parameter | Description
 -- | --
