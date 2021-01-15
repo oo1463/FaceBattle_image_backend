@@ -48,7 +48,7 @@ def get_images():
         return jsonify(response)
     except:
         response = {'message': 'invalid pictures'}
-        return jsonify(response), 403
+        return jsonify(response), 400
 
 
 if __name__ == "__main__":
