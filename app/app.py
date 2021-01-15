@@ -7,7 +7,10 @@ from PIL import Image
 
 app = Flask(__name__)
 
-model = load_model('./Face_model')
+try:
+    model = load_model('./app/Face_model')
+except:
+    print("Fail to load keras model")
 
 
 @app.route("/images", methods=['POST'])
