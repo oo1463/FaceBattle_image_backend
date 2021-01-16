@@ -8,7 +8,7 @@ from PIL import Image
 app = Flask(__name__)
 
 try:
-    model = load_model('./app/Face_model')
+    model = load_model('app/Face_model')
 except:
     print("Fail to load keras model")
 
